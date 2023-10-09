@@ -1,12 +1,14 @@
 "use client";
 
 import { useEditor, EditorContent } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
+import { TipTapEditorExtensions } from "./extensions";
+import { TipTapEditorProps } from "./props";
 
 export default function Editor() {
   const editor = useEditor({
-    extensions: [StarterKit],
-    content: "<p>Hello World!</p>",
+    extensions: TipTapEditorExtensions,
+    editorProps: TipTapEditorProps,
+    content: "<h1>Untitled</h1>",
   });
 
   return (
